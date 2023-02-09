@@ -59,7 +59,7 @@ int main() {
     }
 
     // 1
-    cout << "Evaluating first 10 curves derivatives at random parameter" << endl;
+    cout << "Evaluating first 15 curves derivatives at random parameter" << endl;
     vector3d derivative;
     double parameter;
     for (auto it = curves.begin(); it != curves.end(); ++it)
@@ -78,7 +78,7 @@ int main() {
     }
 
     // 3
-    cout << "Evaluating first 10 curves at point pi/4" << endl;
+    cout << "Evaluating first 15 curves at point pi/4" << endl;
     vector3d xyz;
     parameter = pi/4;
     for (auto it = curves.begin(); it != curves.end(); ++it)
@@ -115,5 +115,5 @@ int main() {
         cout << it->get()->GetRadius() << endl;
     }
     // 6 
-    cout << endl << "Sum of curves radiuses in container: " << omp_accumulate(curves, 0);
+    cout << endl << "Sum of curves radiuses in container: " << omp_accumulate(curves, 0) << endl;
 }
